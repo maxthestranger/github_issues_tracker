@@ -1,13 +1,15 @@
+import { Link } from 'react-router-dom';
+
 export default function Suggestion({ users }) {
   return (
-    <div>
+    <div className="user">
       {users
         ? users.map((user) => (
-            <div key={user.id}>
-              <img src={user.avatar_url} alt="avatar" width="50" height="50" />
-              <p>{user.login}</p>
+            <Link to={user.login} key={user.id}>
+              <img src={user.avatar_url} alt="avatar" />
+              <p className="name">{user.login}</p>
               <p></p>
-            </div>
+            </Link>
           ))
         : 'No user yet'}
     </div>

@@ -37,17 +37,16 @@ export default function Home() {
       );
 
       setUsers(data.items);
-      console.log(username);
     } catch (e) {
       console.log(e);
     }
   }
 
-  console.log(users, userName.username);
   return (
-    <>
+    <div className="wrapper">
+      <h2 className="title">Github Issue Tracker</h2>
       <Search userName={userName.username} handleChange={handleChange} />
       <Suggestion users={users} />
-    </>
+    </div>
   );
 }
