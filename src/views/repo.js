@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import Back from '../components/back/back';
 
 export default function Repo() {
@@ -55,7 +55,19 @@ export default function Repo() {
       <Back navigate={navigate} />
       <h2 className="title">~{repo.name}</h2>
       <div className="layout">
-        <div className="layout_main"></div>
+        <div className="layout_main">
+          <div className="between">
+            <div className="search">
+              <input type="text" />
+            </div>
+
+            <div className="newIssue">
+              <Link to="/" className="btn">
+                <span>New Issue</span>
+              </Link>
+            </div>
+          </div>
+        </div>
         <div className="layout_sidebar">
           <div className="border_grid">
             <div className="border_grid_row hide_md">
