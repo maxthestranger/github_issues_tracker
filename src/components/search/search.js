@@ -5,7 +5,7 @@ export default function Search({ userName, handleChange }) {
       placeholder="Search for user..."
       value={userName}
       onChange={handleChange}
-      className="search"
+      className="userSearch"
     />
   );
 }

@@ -40,7 +40,7 @@ input {
   outline: none;
 }
 
-.search {
+.userSearch {
   min-width: 80%;
 }
 
@@ -97,7 +97,7 @@ a {
 }
 
 @media (min-width: 920px) {
-  .search {
+  .userSearch {
     min-width: 40%;
   }
 }
